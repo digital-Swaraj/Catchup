@@ -40,4 +40,17 @@ There is normal js and minimized js file in Catchup.
 	data.vHasData(div1) // returns that div1 has data-* attributes or not
 	data.vRemoveData(div1, "foo") // removes data-foo attribute to div1
 </script>
+// html goes here
+<div id="div1">Hello World!</div>
+<div id="div2" data-bar="foo">Hello again!</div>
 ```
+
+#### Functions
+1. .vSet()
+2. .vGet()
+3. .vHasData()
+4. .vRemoveData()
+5. .vData()
+
+'v' is prefix for data functions for handling data with data-* attributes.
+You can use normal functions instead of 'v' functions
