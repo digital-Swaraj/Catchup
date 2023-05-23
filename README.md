@@ -13,11 +13,11 @@ There is normal js and minimized js file in Catchup.
 	var owner = {};
 	var data = new Catchup();
 	data.set(owner, "foo", "bar");
-	data.get(owner, "foo"); # returns "bar"
-	data.hasData(owner); # returns true
-	data.hasData(owner, "foo") #returns true
+	data.get(owner, "foo"); // returns "bar"
+	data.hasData(owner); // returns true
+	data.hasData(owner, "foo") // returns true
 	data.removeData(owner, "foo");
-	data.hasData(owner, "foo"); #returns false
+	data.hasData(owner, "foo"); // returns false
 </script>
 ```
 
@@ -33,4 +33,11 @@ There is normal js and minimized js file in Catchup.
 <script>
 	var div1 = document.getElementById("div1");
 	var div2 = document.getElementById("div2");
+	var data = new Catchup();
+	data.vSet(div1, "foo", "bar"); // sets attribute data-foo="bar" to div1
+	data.vGet(di2, "bar") // it gets attribute data-bar to div2
+	data.vHasData(div2, "foo") // return that div2 has data-foo attribute or not
+	data.vHasData(div1) // returns that div1 has data-* attributes or not
+	data.vRemoveData(div1, "foo") // removes data-foo attribute to div1
+</script>
 ```
