@@ -1,3 +1,8 @@
+/*
+Catchup.js
+A library for 
+MIT License
+Copyright (c) 2023 digital-Swaraj*/
 
 "use strict";
 
