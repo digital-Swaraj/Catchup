@@ -1,8 +1,12 @@
 /*
+
 Catchup.js
-A library for 
+A js library for data storing and getting to any owner or element by js. 
 MIT License
-Copyright (c) 2023 digital-Swaraj*/
+Copyright (c) 2023 digital-Swaraj
+View on https://github.com
+
+*/
 
 "use strict";
 
