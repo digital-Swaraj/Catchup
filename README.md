@@ -14,5 +14,23 @@ There is normal js and minimized js file in Catchup.
 	var data = new Catchup();
 	data.set(owner, "foo", "bar");
 	data.get(owner, "foo"); # returns "bar"
-	data.has(owner); # returns true
-	data
+	data.hasData(owner); # returns true
+	data.hasData(owner, "foo") #returns true
+	data.removeData(owner, "foo");
+	data.hasData(owner, "foo"); #returns false
+</script>
+```
+
+#### Functions
+1. .set()
+2. .get()
+3. .hasData()
+4. .removeData()
+5. .data()
+
+### With DOM elements
+```HTML
+<script>
+	var div1 = document.getElementById("div1");
+	var div2 = document.getElementById("div2");
+```
