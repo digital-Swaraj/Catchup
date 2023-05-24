@@ -1,5 +1,5 @@
 # Catchup
-Catchup is a js library for data storing and getting to any owner or element by js.
+Catchup is a js library for data storing and getting to any owner or HTML element by js.
 
 ## Files
 
