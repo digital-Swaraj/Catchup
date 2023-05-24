@@ -53,4 +53,4 @@ There is normal js and minimized js file in Catchup.
 5. .vData()
 
 'v' is prefix for data functions for handling data with data-* attributes.
-You can use normal functions instead of 'v' functions
+You can use normal functions instead of 'v' functions with elements but it can't handle with data-* attributes.
