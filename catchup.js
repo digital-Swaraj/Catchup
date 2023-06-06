@@ -1,10 +1,10 @@
 /*
 
 Catchup.js
-A js library for data storing and getting to any owner or element by js. 
+A js library for data storing, getting to any owner or element by and managing cookies js. 
 MIT License
 Copyright (c) 2023 digital-Swaraj
-View on https://github.com
+View on https://github.com/digital-Swaraj/Catchup
 
 */
 
@@ -95,5 +95,62 @@ Catchup.prototype.vGet = function( owner, key ){
 
 Catchup.prototype.vSet = function( owner, key, value ){
 	owner.setAttribute( "data-" + key, value );
+	return this;
+};
+
+
+Catchup.rawCookie = function( obj ){
+	var raw = "";
+	for( const [ key, value ] of Object.entries( obj ) ){
+		raw += key + "=" + value + "; ";
+	}
+	return raw;
+};
+
+Catchup.uRawCookie = function( raw ){
+	var data = {},
+	rawData = raw.split(";");
+	for( var i = 0; i < rawData.length; i++ ){
+		data[ rawData[ i ].split("=")[ 0 ] ] = rawData[ i ].split("=")[ 1 ] || "";
+	}
+	return data;
+};
+
+Catchup.prototype.cData = function( doc ){
+	doc = doc || document;
+	return Catchup.uRawCookie( doc.cookie || "" );
+};
+
+Catchup.prototype.cHasProperData = function( data, key ){
+	if( data[ key ] == "" ){
+		return false;
+	}
+	if( data[ key ] == null ){
+		return false;
+	}
+	return true;
+}
+
+Catchup.prototype.cHasData = function( key, doc ){
+	var data = this.cData( doc );
+	return this.cHasProperData( data, key );
+};
+
+Catchup.prototype.cRemoveData = function( key, doc ){
+	return this.cSet( key, "", doc );
+};
+
+Catchup.prototype.cGet = function( key, doc ){
+	var data = this.cData( doc );
+	if( this.cHasData( key, doc ) ){
+		return data[ key ];
+	}
+	return false;
+};
+
+Catchup.prototype.cSet = function( key, value, doc ){
+	var data = this.cData( doc );
+	data[ key ] = value;
+	( doc || document ).cookie = Catchup.rawCookie( data );
 	return this;
 };
