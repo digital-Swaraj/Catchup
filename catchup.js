@@ -1,7 +1,7 @@
 /*
 
 Catchup.js
-A js library for data storing, getting to any owner or element by and managing cookies js. 
+A js library for data storing, getting to any owner or element and managing cookies by js. 
 MIT License
 Copyright (c) 2023 digital-Swaraj
 View on https://github.com/digital-Swaraj/Catchup
