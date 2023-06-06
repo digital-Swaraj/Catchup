@@ -1,5 +1,5 @@
 # Catchup
-A js library for data storing, getting to any owner or element and managing cookies by js.
+A js library for data storing, getting to any owner or element and managing cookies.
 
 ## Files
 
