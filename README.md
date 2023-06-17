@@ -3,7 +3,7 @@ A js library for data storing, getting to any owner or element and managing cook
 
 ## Files
 
-There is normal js and minimized js file in Catchup.
+There is normal js file in Catchup.
 
 ## Usage
 
